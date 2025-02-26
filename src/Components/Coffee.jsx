@@ -7,7 +7,6 @@ import Swal from 'sweetalert2'
 
 const Coffee = ({ coffee }) => {
       const { id, name, chef, price, image } = coffee || {};
-      console.log(coffee);
       const handle_delete = () => {
             const swalWithBootstrapButtons = Swal.mixin({
                   customClass: {
