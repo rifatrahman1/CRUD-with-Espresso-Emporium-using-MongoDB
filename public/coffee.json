@@ -1,0 +1,69 @@
+[
+      {
+        "id": 1,
+        "name": "Espresso Delight",
+        "chef": "John Doe",
+        "price": 150,
+        "image": "https://i.ibb.co.com/LXKb8qQz/1.png",
+        "supplier": "Coffee Beans Ltd.",
+        "taste": "Strong & Bitter",
+        "category": "Espresso",
+        "details": "A rich and strong espresso made from the finest Arabica beans."
+      },
+      {
+        "id": 2,
+        "name": "Caramel Macchiato",
+        "chef": "Sarah Smith",
+        "price": 220,
+        "image": "https://i.ibb.co.com/Kxq1grLj/2.png",
+        "supplier": "Premium Coffee Roasters",
+        "taste": "Sweet & Creamy",
+        "category": "Macchiato",
+        "details": "A perfect blend of espresso, steamed milk, and caramel drizzle."
+      },
+      {
+        "id": 3,
+        "name": "Mocha Bliss",
+        "chef": "James Anderson",
+        "price": 200,
+        "image": "https://i.ibb.co.com/Pvz1dJF3/3.png",
+        "supplier": "Dark Roast Suppliers",
+        "taste": "Chocolatey & Smooth",
+        "category": "Mocha",
+        "details": "A delightful combination of coffee and rich chocolate, topped with whipped cream."
+      },
+      {
+        "id": 4,
+        "name": "Vanilla Latte",
+        "chef": "Emma Brown",
+        "price": 180,
+        "image": "https://i.ibb.co.com/Pv8M0pBC/4.png",
+        "supplier": "Organic Coffee Co.",
+        "taste": "Mild & Sweet",
+        "category": "Latte",
+        "details": "A smooth and creamy latte with a hint of vanilla."
+      },
+      {
+        "id": 5,
+        "name": "Hazelnut Cappuccino",
+        "chef": "David White",
+        "price": 210,
+        "image": "https://i.ibb.co.com/1YhfrF9D/5.png",
+        "supplier": "Fine Beans Limited",
+        "taste": "Nutty & Frothy",
+        "category": "Cappuccino",
+        "details": "A classic cappuccino infused with the richness of hazelnuts."
+      },
+      {
+        "id": 6,
+        "name": "Iced Americano",
+        "chef": "Olivia Green",
+        "price": 170,
+        "image": "https://i.ibb.co.com/GSxTnxD/6.png",
+        "supplier": "Cool Beans Company",
+        "taste": "Bold & Refreshing",
+        "category": "Americano",
+        "details": "A refreshing iced coffee with a bold espresso taste."
+      }
+    ]
+    
