@@ -14,7 +14,7 @@ const Add_coffee = () => {
             const category = form.category.value;
             const details = form.details.value;
             const photo = form.photo.value;
-            const new_coffee = {name, chef, supplier, taste, category, details, photo}
+            const new_coffee = { name, chef, supplier, taste, category, details, photo }
             console.log(new_coffee);
 
             fetch('http://localhost:5000/coffee', {
@@ -24,18 +24,20 @@ const Add_coffee = () => {
                   },
                   body: JSON.stringify(new_coffee)
             })
-            .then(res => res.json())
-            .then((data) => {
-                  console.log(data);
-                  if(data.insertedId) {
-                        Swal.fire({
-                              title: 'Success!',
-                              text: 'User Added Successfully',
-                              icon: 'success',
-                              confirmButtonText: 'Cool'
-                            })
-                  }
-            })
+                  .then(res => res.json())
+                  .then((data) => {
+                        console.log(data);
+                        if (data.insertedId) {
+                              Swal.fire({
+                                    title: 'Success!',
+                                    text: 'User Added Successfully',
+                                    icon: 'success',
+                                    confirmButtonText: 'Cool'
+                              })
+                        }
+                  })
+            form.reset();
+
       }
       return (
             <div className='w-9/12 mx-auto'>

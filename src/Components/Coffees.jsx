@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { LuCoffee } from 'react-icons/lu';
 import './Product.css'
 import Coffee from './Coffee';
 
 const Coffees = () => {
-      const coffees = useLoaderData();
+      const loaded_coffees = useLoaderData();
+      const [coffees, set_coffees] = useState(loaded_coffees);    
       return (
             <div className='bg-custom min-h-screen w-full mt-32'>
                   <div className='text-center'>
@@ -15,7 +16,7 @@ const Coffees = () => {
                   </div>
                   <div className='w-9/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-6'>
                         {
-                              coffees.map((coffee) => <Coffee key={coffee.id} coffee={coffee}></Coffee>)
+                              coffees.map((coffee) => <Coffee key={coffee._id} coffee={coffee} coffees={coffees} set_coffees={set_coffees}></Coffee>)
                         }
                   </div>
             </div>

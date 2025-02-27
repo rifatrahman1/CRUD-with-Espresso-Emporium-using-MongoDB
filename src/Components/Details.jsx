@@ -5,17 +5,19 @@ import { Link, useLoaderData, useParams } from 'react-router-dom';
 const Details = () => {
       const [coffees, set_coffees] = useState(null);
       const coffees_data = useLoaderData();
+      console.log(typeof coffees_data);
       const { id } = useParams();
+      console.log(typeof id);
 
       useEffect(() => {
-            const coffee = coffees_data.find((coffee) => coffee.id === Number(id));
+            const coffee = Object.values(coffees_data).find((coffee) => coffee._id === id);
             console.log(coffee);
             if (coffee) {
                   set_coffees(coffee);
                   console.log('coffee', coffee);
             }
       }, [coffees_data, id]);
-      const { name, image, chef, supplier, taste, category, details } = coffees || {};
+      const { name, photo, chef, supplier, taste, category, details } = coffees || {};
       return (
             <div className='w-9/12 mx-auto'>
                   <Link to={'/'}>
@@ -23,7 +25,7 @@ const Details = () => {
                   </Link>
                   <div className='bg-[#F4F3F0] rounded-l-3xl'>
                         <div className='flex items-center gap-28 px-28 py-20'>
-                              <img className='w-[360px]' src={image} alt="" />
+                              <img className='w-[360px]' src={photo} alt="" />
                               <div>
                                     <h1 className='text-4xl text-[#331A15] rancho'>Niceties</h1>
                                     <div className='space-y-3 mt-8'>
