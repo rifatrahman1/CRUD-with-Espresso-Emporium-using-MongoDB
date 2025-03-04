@@ -4,6 +4,9 @@ import Home from "../Components/Home";
 import Details from "../Components/Details";
 import Add_coffee from "../Components/Add_coffee";
 import Update_coffee from "../Components/Update_coffee";
+import SignIn from "../Components/SignIn";
+import SignUp from "../Components/SignUp";
+import Users from "../Components/Users";
 
 const router = createBrowserRouter([
       {
@@ -13,12 +16,12 @@ const router = createBrowserRouter([
                   {
                         path: '/',
                         element: <Home></Home>,
-                        loader: () => fetch('http://localhost:5000/coffee')
+                        loader: () => fetch('https://coffee-store-server-jade-nine.vercel.app/coffee')
                   },
                   {
                         path: '/details/:id',
                         element: <Details></Details>,
-                        loader: () => fetch('http://localhost:5000/coffee')
+                        loader: () => fetch('https://coffee-store-server-jade-nine.vercel.app/coffee')
                   },
                   {
                         path: '/add_coffee',
@@ -27,8 +30,20 @@ const router = createBrowserRouter([
                   {
                         path: '/update_coffee/:id',
                         element: <Update_coffee></Update_coffee>,
-                        loader: ({params}) => fetch(`http://localhost:5000/coffee/${params.id}`)
-                        // loader: () => fetch('http://localhost:5000/coffee/67bf6067cf4df7a6e283c210')
+                        loader: ({ params }) => fetch(`https://coffee-store-server-jade-nine.vercel.app/coffee/${params.id}`)
+                  },
+                  {
+                        path: '/signin',
+                        element: <SignIn></SignIn>
+                  },
+                  {
+                        path: '/signup',
+                        element: <SignUp></SignUp>
+                  },
+                  {
+                        path: '/users',
+                        element: <Users></Users>,
+                        loader: () => fetch('https://coffee-store-server-jade-nine.vercel.app/users')
                   }
             ]
       }
